@@ -1,12 +1,22 @@
-const numbers = [2,7,11,15]
-const target = 9
-var twoSum = function(numbers, target) {
-    let left = 0
-    let right = numbers.length-1
-    while(left<right){
-        if(numbers[left]+numbers[right] === target) return [left+1,right+1]
-        if(numbers[left]+numbers[right] < target) left++
-        if(numbers[left]+numbers[right] > target) right--
+const maxArea = function(height) {
+    var water_amount = 0
+    var i = 0;
+    var j = height.length-1
+    while (i<j) {
+        var left = height[i]
+        var right = height[j]
+        const distance = j - i
+        var small = left < right ? left : right
+        if(water_amount < distance * small){
+            water_amount = distance * small
+        }
+        if (left < right) {
+            i++;
+        } else {
+            j--;
+        }
     }
+    return water_amount
 };
-console.log(twoSum(numbers,target))
+
+console.log(maxArea(height = [1,8,6,2,5,4,8,3,7]))
