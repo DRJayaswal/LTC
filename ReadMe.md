@@ -13,7 +13,7 @@ This repository provides solutions to popular LeetCode problems implemented in J
 
 ## Problems
 
-1. **Game of Life (0/1)** - Implement Conway’s Game of Life.
+1. **Game of Life (0/1)** - Implement Conway’s Game of Life.[https://github.com/DRJayaswal/LTC/blob/main/Game%20of%20Life%20ie%200%5C1%20.js]
 2. **H Index (Citations)** - Calculate the H-index for a researcher’s citations.
 3. **Index of Substring** - Find the first occurrence of a substring in a string.
 4. **Inside Parentheses** - Validate if parentheses are properly nested.
