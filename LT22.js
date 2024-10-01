@@ -7,9 +7,6 @@ const array_to_sum = (array) => {
 }
 var minSubArrayLen = (target,array) => {
     const answer = []
-    array.sort((a,b) => {
-        return a - b;
-    });
     for (let i = array.length - 1 ; i >= 0 ; i--) {
         if(array[i] == target){
             return 1
@@ -130,7 +127,10 @@ const testResults = [
     2, 1, 2, 1, 2, 2, 1, 1, 2, 2,
     2, 2, 1, 3, 2, 3
 ];
-
+var res = 0;
 for (let i = 0; i < testCases.length; i++) {
     console.log(`Answer: ${testResults[i]}, Sum: ${minSubArrayLen(testCases[i].target,testCases[i].array)}`);
+    if(testResults[i] === minSubArrayLen(testCases[i].target,testCases[i].array))
+        res++;
 }
+console.log(`Total Passed: ${(res/testCases.length)*100}`);
